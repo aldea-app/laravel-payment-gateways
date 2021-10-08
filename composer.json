@@ -12,11 +12,11 @@
     "repositories": [
         {
             "type": "git",
-            "url": "https://bitbucket.org/kinedu/srpago-php"
+            "url": "https://github.com/kinedu/srpago-php-sdk"
         },
         {
             "type": "git",
-            "url": "https://bitbucket.org/kinedu/payu-php"
+            "url": "https://github.com/kinedu/payu-php-sdk"
         }
     ],
     "require": {
