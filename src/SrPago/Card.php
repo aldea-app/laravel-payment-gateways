@@ -108,6 +108,7 @@ class Card extends ApiResource
             'last_four' => substr($card['number'], -4),
             'exp_month' => $expMonth,
             'exp_year' => DateTime::createFromFormat('y', $expYear)->format('Y'),
+            'funding' => $card['funding'],
         ];
 
         return $formattedCard;
