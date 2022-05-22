@@ -64,6 +64,15 @@ interface PaymentGateway
     public function getOperation(string $transactionId);
 
     /**
+     * Generate a reference number for an Oxxo payment deposit.
+     *
+     * @param  int  $amount
+     * @param  string  $description
+     * @return array
+     */
+    public function generateOxxoPaymentReference(int $amount, string $description): array;
+
+    /**
      * Return the name of the current payment provider.
      *
      * @return string

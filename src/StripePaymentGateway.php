@@ -146,6 +146,18 @@ class StripePaymentGateway implements PaymentGateway
     }
 
     /**
+     * Generate a reference number for an Oxxo payment deposit.
+     *
+     * @param  int  $amount
+     * @param  string  $description
+     * @return array
+     */
+    public function generateOxxoPaymentReference(int $amount, string $description)
+    {
+        throw new Exception("{$this->getProviderName()} does not support Oxxo payments.");
+    }
+
+    /**
      * Return the name of the current payment provider.
      *
      * @return string

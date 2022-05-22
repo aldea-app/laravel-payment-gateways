@@ -7,7 +7,8 @@ use Kinedu\PaymentGateways\SrPago\{
     Card as SrPagoCard,
     Charge as SrPagoCharge,
     Customer as SrPagoCustomer,
-    Operation as SrPagoOperation
+    Operation as SrPagoOperation,
+    OxxoPayment as SrPagoOxxoPayment
 };
 
 class SrPagoPaymentGateway implements PaymentGateway
@@ -96,6 +97,18 @@ class SrPagoPaymentGateway implements PaymentGateway
     public function getOperation(string $transactionId)
     {
         return SrPagoOperation::find($transactionId);
+    }
+
+    /**
+     * Generate a reference number for an Oxxo payment deposit.
+     *
+     * @param  int  $amount
+     * @param  string  $description
+     * @return array
+     */
+    public function generateOxxoPaymentReference(int $amount, string $description)
+    {
+        return SrPagoOxxoPayment::create($amount, $description);
     }
 
     /**
