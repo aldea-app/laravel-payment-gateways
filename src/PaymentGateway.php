@@ -70,7 +70,7 @@ interface PaymentGateway
      * @param  string  $description
      * @return array
      */
-    public function generateOxxoPaymentReference(int $amount, string $description): array;
+    public function generateOxxoPaymentReference(int $amount, string $description);
 
     /**
      * Return the name of the current payment provider.
