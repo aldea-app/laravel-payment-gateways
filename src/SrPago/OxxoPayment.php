@@ -16,7 +16,7 @@ class OxxoPayment extends ApiResource
      * @param  string  $description
      * @return array
      */
-    public function createReference(int $amount, string $description)
+    public static function createReference(int $amount, string $description)
     {
         try {
             $payload = [
