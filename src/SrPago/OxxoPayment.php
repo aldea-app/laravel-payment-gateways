@@ -16,7 +16,7 @@ class OxxoPayment extends ApiResource
      * @param  string  $description
      * @return array
      */
-    public function charge(int $amount, string $description)
+    public function createReference(int $amount, string $description)
     {
         try {
             $payload = [
@@ -24,7 +24,7 @@ class OxxoPayment extends ApiResource
                 'amount' => $amount,
             ];
 
-            return SrPagoOxxoPayment::create($payload);
+            return SrPagoOxxoPayment::createReference($payload);
         } catch (SrPagoError $e) {
             throw new Exception($e->getError()['message']);
         } catch (Exception $e) {
