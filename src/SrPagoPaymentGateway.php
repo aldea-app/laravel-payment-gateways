@@ -108,7 +108,7 @@ class SrPagoPaymentGateway implements PaymentGateway
      */
     public function generateOxxoPaymentReference(int $amount, string $description)
     {
-        return SrPagoOxxoPayment::create($amount, $description);
+        return SrPagoOxxoPayment::createReference($amount, $description);
     }
 
     /**
