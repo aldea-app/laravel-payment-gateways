@@ -24,7 +24,7 @@ class OxxoPayment extends ApiResource
                 'amount' => $amount,
             ];
 
-            return SrPagoOxxoPayment::createReference($payload);
+            return (new SrPagoOxxoPayment())->createReference($payload);
         } catch (SrPagoError $e) {
             throw new Exception($e->getError()['message']);
         } catch (Exception $e) {
