@@ -75,7 +75,7 @@ class PaymentIntent extends ApiResource
     public static function cancel(string $paymentIntentId, array $data = [])
     {
         try {
-            $paymentIntent = StripePaymentIntent::cancel($paymentIntentId, $data);
+            $paymentIntent = self::get($paymentIntentId)->cancel($data);
         } catch (Exception $e) {
             throw $e;
         }
