@@ -8,6 +8,7 @@ Kinedu Payment Gateway provides an expressive, fluent interface to a number of d
 - [Conekta](https://conekta.com)
 - [PayU](https://www.payulatam.com)
 - [SrPago](https://senorpago.com)
+- [Stripe](https://stripe.com)
 
 ### Pending Services Support
 - _TBD_
