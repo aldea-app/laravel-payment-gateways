@@ -9,19 +9,9 @@
             "email": "ed@kinedu.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/kinedu/srpago-php-sdk"
-        },
-        {
-            "type": "git",
-            "url": "https://github.com/kinedu/payu-php-sdk"
-        }
-    ],
     "require": {
-        "php": ">=5.5.9",
-        "illuminate/support": "~5.3"
+        "php": "^7.2",
+        "illuminate/support": "5.*|^6.0"
     },
     "require-dev": {
         "mockery/mockery": "~1.0",
