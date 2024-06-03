@@ -23,11 +23,10 @@ interface PaymentGateway
     /**
      * Add a new customer card.
      *
-     * @param  string  $customerId
-     * @param  string  $token
+     * @param  mixed  ...$args
      * @return mixed
      */
-    public function addCard(string $customerId, string $token);
+    public function addCard(...$args);
 
     /**
      * Return a listing of all cards belonging to the specified customer

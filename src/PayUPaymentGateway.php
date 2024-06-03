@@ -88,8 +88,18 @@ class PayUPaymentGateway implements PaymentGateway
      * @param  string  $token
      * @throws \Exception
      */
-    public function addCard(string $customerId, string $token)
+    public function addCard(...$args)
     {
+        if (count($args) !== 2) {
+            throw new \InvalidArgumentException('The addCard method expects exactly 2 arguments.');
+        }
+
+        [$customerId, $token] = $args;
+
+        if (! is_string($customerId) || ! is_string($token)) {
+            throw new \InvalidArgumentException('The addCard method expects both arguments to be strings.');
+        }
+
         throw new Exception('This feature is not currently supported.');
     }
 
