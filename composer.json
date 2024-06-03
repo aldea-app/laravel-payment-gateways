@@ -1,12 +1,12 @@
 {
-    "name": "kinedu/payment-gateways",
-    "description": "Payment gateways for use in Kinedu projects.",
-    "keywords": ["laravel", "kinedu", "billing"],
+    "name": "aldea/payment-gateways",
+    "description": "Payment gateways for use in Aldea projects.",
+    "keywords": ["laravel", "aldea", "billing"],
     "license": "MIT",
     "authors": [
         {
             "name": "Ed Bentinck",
-            "email": "ed@kinedu.com"
+            "email": "ed@getaldea.com"
         }
     ],
     "require": {

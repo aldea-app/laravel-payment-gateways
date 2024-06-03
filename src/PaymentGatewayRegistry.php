@@ -17,6 +17,7 @@ class PaymentGatewayRegistry
      * @var array
      */
     protected $supportedGateways = [
+        'MattildaPay',
         'SrPago',
         'Stripe',
     ];
